@@ -45,6 +45,7 @@
     padding: 0.5rem;
     font-family: 'Open Sans', sans-serif;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .btn:hover {
