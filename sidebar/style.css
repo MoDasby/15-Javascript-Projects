@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+ul, li, a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    width: 30vw;
+    height: 100vh;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    transform: translate(-30vw, 0);
+    transition: 0.5s;
+}
+
+.sidebar-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-close {
+    font-size: 25px;
+    color: #c00303bb;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-close:hover {
+    color: #ff0000;
+    transform: rotate(360deg);
+}
+
+.sidebar-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.sidebar-items li {
+    width: 100%;
+}
+
+.sidebar-item {
+    display: block;
+    margin: 15px;
+    color: #000000;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-align: left;
+    padding: 25px;
+}
+
+.social-media-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-media-icon {
+    margin: 15px;
+    color: #49a6e9;
+    letter-spacing: 5px;
+}
+
+.sidebar-item, .social-media-icon {
+    transition: 0.5s;
+}
+
+.sidebar-item:hover {
+    background-color: #8bcbf9;
+    transform: translateX(10px);
+}
+
+.social-media-icon:hover {
+    color: #8bcbf9;
+}
+
+.sidebar-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #49a6e9;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: sidebar-toggle-loop 2s infinite;
+}
+
+@keyframes sidebar-toggle-loop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.sidebar-toggle:hover {
+    color: #8bcbf9;
+}
+
+.sidebar-open {
+    /* move sidebar to the left */
+    transform: translate(0);
+}
